@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://servico.crudsoap.ifms.edu.br/" xmlns:tns="http://servico.crudsoap.ifms.edu.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="adicionar" type="tns:adicionar"/>
+
+  <xs:element name="adicionarResponse" type="tns:adicionarResponse"/>
+
+  <xs:element name="alterar" type="tns:alterar"/>
+
+  <xs:element name="alterarResponse" type="tns:alterarResponse"/>
+
+  <xs:element name="apagar" type="tns:apagar"/>
+
+  <xs:element name="apagarResponse" type="tns:apagarResponse"/>
+
+  <xs:element name="ler" type="tns:ler"/>
+
+  <xs:element name="lerResponse" type="tns:lerResponse"/>
+
+  <xs:element name="listar" type="tns:listar"/>
+
+  <xs:element name="listarResponse" type="tns:listarResponse"/>
+
+  <xs:complexType name="alterar">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:noticia" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="noticia">
+    <xs:sequence>
+      <xs:element name="data" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="texto" type="xs:string" minOccurs="0"/>
+      <xs:element name="titulo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="alterarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:noticia" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="apagar">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="apagarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ler">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="lerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:noticia" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listar">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:noticia" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="adicionar">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:noticia" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="adicionarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

@@ -79,7 +79,7 @@
 				</dependencies>
 			</plugin>
 			
-			<!--plugin>
+			<plugin>
 				<groupId>com.sun.xml.ws</groupId>
 				<artifactId>jaxws-maven-plugin</artifactId>
 				<version>3.0.0</version>
@@ -91,12 +91,12 @@
 					</execution>
 				</executions>
 				<configuration>
-					<sei>br.edu.ifms.jaxwscrudservice.servico.NoticiaSIB</sei>
+					<sei>br.edu.ifms.crudsoap.servico.NoticiaSIB</sei>
 					<genWsdl>true</genWsdl>
 					<resourceDestDir>${project.build.outputDirectory}/
                             </resourceDestDir>
 				</configuration>
-			</plugin-->			
+			</plugin>			
 		</plugins>
 	</build>
 </project>

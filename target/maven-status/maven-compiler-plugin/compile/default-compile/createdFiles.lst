@@ -1,0 +1,7 @@
+br\edu\ifms\crudsoap\util\Conexao.class
+br\edu\ifms\crudsoap\servico\NoticiaSEI.class
+br\edu\ifms\crudsoap\modelo\Noticia.class
+br\edu\ifms\crudsoap\dao\NoticiaImpl.class
+br\edu\ifms\crudsoap\servico\NoticiaSIB.class
+br\edu\ifms\crudsoap\dao\NoticiaDao.class
+br\edu\ifms\crudsoap\App.class

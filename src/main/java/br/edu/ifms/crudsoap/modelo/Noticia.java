@@ -1,6 +1,7 @@
 package br.edu.ifms.crudsoap.modelo;
 
-import java.sql.Date;
+import java.util.Date;
+
 //POJO
 public class Noticia {
 	private long id;
